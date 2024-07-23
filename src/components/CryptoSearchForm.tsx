@@ -11,14 +11,15 @@ export default function CryptoSearchForm() {
 		cryptocurrency: '',
 	});
 
-	const [error, seterror] = useState('');
+	const [error, setError] = useState('');
 
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		if (Object.values(pair).includes('')) {
-			seterror('Todos los campos son obligatorios');
+			setError('Todos los campos son obligatorios');
 			return;
 		}
+		setError('');
 
 		// Consultar la api
 	};
