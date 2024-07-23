@@ -11,6 +11,8 @@ html {
 
 body {
   background-image: url('/bg.jpg');
+  font-size: 2rem;
+  font-weight: 500;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -44,4 +46,42 @@ h1 span {
   background-color: var(--white);
   border-radius: 1rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.form,
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form label {
+  color: var(--black);
+}
+
+.form select {
+  background-color: #D0DDD7;
+  border: none;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 1.8rem;
+}
+
+.form [type='submit'] {
+  background-color: var(--primary);
+  color: var(--black);
+  padding: 1rem;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-top: 2rem;
+  transition: all .3s;
+}
+
+.form [type='submit']:hover {
+  background-color: #5A9E9B;
+  color: var(--white);
 }
