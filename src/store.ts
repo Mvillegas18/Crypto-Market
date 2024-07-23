@@ -1,6 +1,12 @@
 import axios from 'axios';
 import { create } from 'zustand';
 import { CryptoCurrenciesResponseSchema } from './schema/crypto-schema';
+import { CryptoCurrency } from './types';
+
+type CryptoStore = {
+	cryptoCurrencies: CryptoCurrency[];
+	fetchCryptos: () => Promise<void>;
+};
 
 async function getCryptos() {
 	const url =
@@ -17,7 +23,7 @@ async function getCryptos() {
 	}
 }
 
-export const useCryptoStore = create((set) => ({
+export const useCryptoStore = create<CryptoStore>((set) => ({
 	cryptoCurrencies: [],
 	fetchCryptos: async () => {
 		const cryptoCurrencies = await getCryptos();
