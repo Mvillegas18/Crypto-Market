@@ -1,14 +1,14 @@
-import CriptoSearchForm from './components/CriptoSearchForm';
+import CryptoSearchForm from './components/CryptoSearchForm';
 
 export default function App() {
 	return (
 		<div className='container'>
 			<h1 className='app-title'>
-				Cotizador de <span>Criptomonedas</span>
+				Cotizador de <span>Cryptomonedas</span>
 			</h1>
 
 			<div className='content'>
-				<CriptoSearchForm />
+				<CryptoSearchForm />
 			</div>
 		</div>
 	);
