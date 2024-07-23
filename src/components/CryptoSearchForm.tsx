@@ -5,7 +5,7 @@ import { PairCurrency } from '../types';
 import ErrorMessage from './ErrorMessage';
 
 export default function CryptoSearchForm() {
-	const { cryptoCurrencies } = useCryptoStore();
+	const { cryptoCurrencies, fetchData } = useCryptoStore();
 	const [pair, setPair] = useState<PairCurrency>({
 		currency: '',
 		cryptocurrency: '',
@@ -22,6 +22,7 @@ export default function CryptoSearchForm() {
 		setError('');
 
 		// Consultar la api
+		fetchData(pair);
 	};
 
 	const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
