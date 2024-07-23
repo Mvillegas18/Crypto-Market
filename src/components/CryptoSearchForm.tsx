@@ -1,6 +1,6 @@
 import { currencies } from '../data';
 
-export default function CriptoSearchForm() {
+export default function CryptoSearchForm() {
 	return (
 		<form className='form'>
 			<div className='field'>
@@ -20,10 +20,10 @@ export default function CriptoSearchForm() {
 			</div>
 
 			<div className='field'>
-				<label htmlFor='criptocurrency'>Criptomoneda:</label>
+				<label htmlFor='cryptocurrency'>Cryptomoneda:</label>
 				<select
-					name='criptocurrency'
-					id='criptocurrency'>
+					name='cryptocurrency'
+					id='cryptocurrency'>
 					<option value=''>-- Seleccione --</option>
 				</select>
 			</div>
