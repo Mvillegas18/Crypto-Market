@@ -17,10 +17,13 @@ async function getCryptos() {
 	}
 }
 
-export const useCryptoStore = create(() => ({
+export const useCryptoStore = create((set) => ({
+	cryptoCurrencies: [],
 	fetchCryptos: async () => {
 		const cryptoCurrencies = await getCryptos();
 
-		return cryptoCurrencies;
+		set(() => ({
+			cryptoCurrencies,
+		}));
 	},
 }));
