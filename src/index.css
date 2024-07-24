@@ -85,3 +85,33 @@ h1 span {
   background-color: #5A9E9B;
   color: var(--white);
 }
+
+.result-wrapper {
+  margin-top: 5rem;
+}
+
+.result-wrapper h2 {
+  text-align: center;
+}
+
+.result {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+  align-content: center;
+  gap: 1rem;
+}
+
+.result img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.result p {
+  margin: 0 0 1rem;
+  font-size: 1.6rem;
+}
+
+.result span {
+  font-weight: 700;
+}
